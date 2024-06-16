@@ -15,10 +15,6 @@
 
       # Configure Snowfall Lib, all of these settings are optional.
       snowfall = {
-        # Tell Snowfall Lib to look in the `./nix/` directory for your
-        # Nix files.
-        root = ./nix;
-
         # Choose a namespace to use for your flake's packages, library,
         # and overlays.
         namespace = "nixos-hardware";
@@ -34,7 +30,7 @@
       };
 
       # Allow unfree packages.
-      channels-config = {allowUnfree = true;};
+      channels-config.allowUnfree = true;
 
       alias.modules.nixos.default = "nixos-hardware";
     };
